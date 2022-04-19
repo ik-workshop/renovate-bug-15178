@@ -19,6 +19,9 @@ module.exports = {
   "onboarding": false,
   "requireConfig": false,
   "baseBranches": ["master", "main"],
+  "pre-commit": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],

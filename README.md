@@ -6,6 +6,9 @@ Github API does not let to push empty labels. Renovate can have a behaviour chan
 - [Issue](https://github.com/renovatebot/renovate/issues/15178)
 - [Bug fix. TODO]()
 
+- [Pre-commit support](https://docs.renovatebot.com/modules/manager/pre-commit/)
+- [commitMessageSuffix](https://docs.renovatebot.com/configuration-options/#commitmessagesuffix)
+
 ---
 
 ![](https://img.shields.io/github/commit-activity/m/ik-workshop/renovate-bug-15178)
