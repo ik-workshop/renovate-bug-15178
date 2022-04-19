@@ -3,9 +3,8 @@
 Labels not set when there is an empty label. The renovate congiration does not validate user input, or runtime label setup.
 Github API does not let to push empty labels. Renovate can have a behaviour changed slightly.
 
-- [Issue](https://github.com/renovatebot/renovate/issues/14328)
-- [Bug fix](https://github.com/renovatebot/renovate/pull/14322)
-- [Proposal: is.nonEmptyStringOrWhitespace](https://github.com/sindresorhus/is/issues/158)
+- [Issue](https://github.com/renovatebot/renovate/issues/15178)
+- [Bug fix. TODO]()
 
 ---
 
@@ -29,11 +28,7 @@ Github API does not let to push empty labels. Renovate can have a behaviour chan
 
 - [Example](#example)
   - [Example 1](#example-1)
-  - [Example 2](#example-2)
-  - [Example 3](#example-3)
-- [How to run](#how-to-run)
-- [Create](#create)
-- [Resources](#resources)
+
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
