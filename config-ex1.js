@@ -6,8 +6,6 @@ if (!Fs.existsSync('repos.json')) {
   throw new Error('Missing enabled-repos.json - please create it by running "npm run generate-enabled".');
 }
 
-const enableManagers = ["regex"]
-
 module.exports = {
   "platform": "github",
   "token": process.env.RENOVATE_TOKEN,
@@ -25,23 +23,10 @@ module.exports = {
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
       "addLabels": ["{{depType}}", "{{datasource}}", "{{updateType}}"]
+    },
+    {
+      "matchManagers": ["terragrunt-version", "pre-commit"],
+      "commitMessageSuffix": "[skip ci]"
     }
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": ['helm-release\.yaml'],
-      "matchStrings": [
-        "chart:\n *repository: (?<registryUrl>.*?)\n *name: (?<depName>.*?)\n *version: (?<currentValue>.*)\n"
-      ],
-      "datasourceTemplate": "helm"
-    },
-    {
-      "fileMatch": ['dev\.env'],
-      "matchStrings": [
-        "^#\\s*renovate:\\s*repository=(?<registryUrl>.*?)\\s*depName=(?<depName>.*?)\n.*?_HELM_CHART_VERSION=\"(?<currentValue>.*)\""
-      ],
-      "datasourceTemplate": "helm"
-    },
-  ],
-  "enabledManagers": enableManagers,
+  ]
 }

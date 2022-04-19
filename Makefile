@@ -4,7 +4,7 @@ SHELL = /bin/sh -o pipefail
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
-CI_RENOVATE_IMAGE := renovate/renovate:31.89-slim
+CI_RENOVATE_IMAGE := renovate/renovate:32.26-slim
 LOG_LEVEL := debug
 
 help:
